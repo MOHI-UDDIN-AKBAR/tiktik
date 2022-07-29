@@ -1,0 +1,622 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+}
+.navbar h3 {
+  font-family: "Yeseva One", cursive;
+  font-size: 28px;
+  word-spacing: -7px;
+  cursor: pointer;
+  padding: 0.3rem 1rem;
+  margin: 0;
+  color: rgb(97, 97, 213);
+}
+.navbar .loginSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-right: 20px;
+}
+.navbar .loginSection .userInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navbar .loginSection .userInfo .uploadButton {
+  margin-right: 10px;
+  cursor: pointer;
+  border: 2px solid black;
+  padding: 0.5rem;
+}
+.navbar .loginSection .userInfo .uploadButton span {
+  padding: 0.6rem 0;
+}
+.navbar .loginSection .userInfo .userPicture {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navbar .loginSection .userInfo .userPicture .picture {
+  border-radius: 50%;
+}
+.navbar .loginSection .userInfo .logout {
+  font-size: 24px;
+  margin-left: 13px;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(213, 63, 63);
+}
+.navbar .googleLogin {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 700px) {
+  .navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+  }
+  .navbar h3 {
+    font-family: "Yeseva One", cursive;
+    font-size: 28px;
+    word-spacing: 0px;
+    cursor: pointer;
+    padding: 0.3rem 1rem;
+    margin: 0;
+    color: rgb(97, 97, 213);
+  }
+  .navbar .loginSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 30px;
+    margin-top: 20px;
+  }
+  .navbar .loginSection .userInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 5px;
+  }
+  .navbar .loginSection .userInfo .uploadButton {
+    margin-right: 20px;
+    cursor: pointer;
+    padding: 0.6rem;
+    border: 2px solid black;
+  }
+  .navbar .loginSection .userInfo .uploadButton span {
+    padding: 1rem 0.6rem;
+    font-size: 20px;
+  }
+  .navbar .loginSection .userInfo .userPicture {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto 20px;
+  }
+  .navbar .loginSection .userInfo .userPicture .picture {
+    border-radius: 50%;
+  }
+  .navbar .loginSection .userInfo .logout {
+    transform: translateY(2px);
+    font-size: 30px;
+    margin-left: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(213, 63, 63);
+  }
+}
+.sidebar {
+  padding: 1rem;
+  border-right: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.sidebar .home {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  border-bottom: 2px solid rgb(112, 112, 112);
+}
+.sidebar .home .icon {
+  font-size: 25px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: rgb(56, 56, 206);
+  margin-bottom: 10px;
+}
+.sidebar .home .text {
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: rgb(81, 81, 214);
+  margin-bottom: 10px;
+}
+.sidebar .topics {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.sidebar .topics .popularText {
+  color: rgb(100, 99, 99);
+  font-size: 18px;
+  margin: 7px 0;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.sidebar .topics .allTopics {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.sidebar .topics .allTopics .topic, .sidebar .topics .allTopics .activeTopic {
+  cursor: pointer;
+  border: 1px solid #1f2633;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 7px 8px;
+  padding: 0.3rem 0.7rem;
+  border-radius: 50px;
+  font-weight: 500;
+  flex-wrap: nowrap;
+}
+.sidebar .topics .allTopics .topic span, .sidebar .topics .allTopics .activeTopic span {
+  margin: 4px;
+}
+.sidebar .topics .allTopics .topic span:first-child, .sidebar .topics .allTopics .activeTopic span:first-child {
+  transform: translateY(2.5px);
+}
+.sidebar .topics .allTopics .activeTopic {
+  color: rgb(81, 81, 214);
+  border: 1px solid rgb(81, 81, 214);
+}
+
+@media screen and (max-width: 1300px) {
+  .sidebar {
+    width: 20vw;
+    padding: 0.3rem;
+    border-right: 2px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .sidebar .home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+  }
+  .sidebar .home .icon {
+    margin-right: 0px;
+  }
+  .sidebar .home .text {
+    display: none;
+  }
+  .sidebar .topics {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .sidebar .topics .popularText {
+    display: none;
+  }
+  .sidebar .topics .allTopics {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .sidebar .topics .allTopics .topic, .sidebar .topics .allTopics .activeTopic {
+    border: none;
+  }
+  .sidebar .topics .allTopics .topic span:first-child, .sidebar .topics .allTopics .activeTopic span:first-child {
+    transform: translateX(0px);
+    font-size: 20px;
+  }
+  .sidebar .topics .allTopics .topic span:last-child, .sidebar .topics .allTopics .activeTopic span:last-child {
+    display: none;
+  }
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 2px solid rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
+}
+.footer .section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 10px;
+}
+.footer .section .each {
+  color: rgb(142, 142, 142);
+  margin: 5px;
+  font-size: 14px;
+}
+.footer .section .each span {
+  cursor: pointer;
+}
+.footer .section .each span:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1300px) {
+  .footer {
+    display: none;
+  }
+}
+.homePage {
+  width: 100%;
+  height: 94vh;
+  margin-left: 50px;
+  overflow: auto;
+}
+.homePage::-webkit-scrollbar {
+  width: 0px;
+}
+.homePage .posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0rem 0rem;
+}
+.homePage .posts .post {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 0px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+.homePage .posts .post .userInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 5px;
+}
+.homePage .posts .post .userInfo .profilePicture {
+  border-radius: 50%;
+}
+.homePage .posts .post .userInfo .info {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.homePage .posts .post .userInfo .info .userName {
+  text-transform: uppercase;
+  font-size: 16px;
+  transform: translateY(12px);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.homePage .posts .post .userInfo .info span:last-child {
+  text-transform: capitalize;
+  margin-top: 15px;
+  font-family: "Cormorant SC", serif;
+  color: rgb(89, 89, 89);
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.homePage .posts .post .userInfo .verified {
+  color: rgb(48, 48, 224);
+  margin: 0 10px;
+  transform: translateY(-10px);
+}
+.homePage .posts .post .userInfo small {
+  transform: translateY(-14px);
+  color: rgb(119, 117, 117);
+  text-transform: lowercase;
+  display: none;
+}
+.homePage .posts .post .videoInfo {
+  height: 500px;
+  width: 290px;
+  margin-bottom: 40px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  position: relative;
+}
+.homePage .posts .post .videoInfo .video {
+  height: 500px;
+  width: 100%;
+}
+.homePage .posts .post .videoInfo .functions {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.homePage .posts .post .videoInfo .functions span {
+  font-size: 25px;
+  cursor: pointer;
+  padding: 0.3rem;
+  font-weight: bold;
+}
+.homePage .posts .post .videoInfo .functions span:nth-child(2) {
+  margin: 0 20px;
+}
+.homePage .posts .post .videoInfo:hover .functions {
+  display: flex;
+}
+
+@media screen and (min-width: 1200px) {
+  .homePage {
+    width: 100%;
+    height: 94vh;
+    margin-left: 70px;
+  }
+  .homePage .posts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    padding: 0.4rem 1rem;
+  }
+  .homePage .posts .post {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .homePage .posts .post .userInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 10px;
+  }
+  .homePage .posts .post .userInfo .profilePicture {
+    border-radius: 50%;
+  }
+  .homePage .posts .post .userInfo .info {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .homePage .posts .post .userInfo .info .userName {
+    text-transform: uppercase;
+    font-size: 16px;
+    transform: translateY(12px);
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .homePage .posts .post .userInfo .info span:last-child {
+    text-transform: capitalize;
+    margin-top: 15px;
+  }
+  .homePage .posts .post .userInfo .verified {
+    color: rgb(48, 48, 224);
+    margin: 0 10px;
+    transform: translateY(-10px);
+  }
+  .homePage .posts .post .userInfo small {
+    transform: translateY(-12px);
+    color: rgb(119, 117, 117);
+    text-transform: lowercase;
+    display: flex;
+  }
+  .homePage .posts .post .videoInfo {
+    height: 500px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .homePage .posts .post .videoInfo .video {
+    width: 700px;
+    border: none;
+  }
+  .homePage .posts .post .videoInfo {
+    height: 600px;
+    width: 700px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .homePage .posts .post .videoInfo .video {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sidebar {
+    display: none;
+  }
+}
+.suggestedUsers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 20px auto;
+}
+.suggestedUsers h3 {
+  color: rgb(100, 99, 99);
+  font-size: 18px;
+  margin: 10px 0;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+.suggestedUsers .user {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 0.5rem;
+}
+.suggestedUsers .user .image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  outline-offset: 3px;
+  outline: 1px solid rgb(81, 81, 214);
+  border-radius: 50%;
+}
+.suggestedUsers .user .image .img {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.suggestedUsers .user .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.suggestedUsers .user .info .userName {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+.suggestedUsers .user .info .userName .icon {
+  color: rgb(42, 42, 204);
+  margin-left: 5px;
+  transform: translateY(2px);
+}
+.suggestedUsers .user .info small {
+  color: grey;
+  margin: 5px;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 1300px) {
+  .suggestedUsers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .suggestedUsers h3 {
+    display: none;
+  }
+  .suggestedUsers .user {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .suggestedUsers .user .image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    outline-offset: 3px;
+    outline: 1px solid rgb(81, 81, 214);
+    border-radius: 50%;
+  }
+  .suggestedUsers .user .info {
+    display: none;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .sidebar {
+    width: 100px;
+  }
+}/*# sourceMappingURL=index.module.css.map */

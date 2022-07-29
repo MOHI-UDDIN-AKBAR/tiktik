@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.container .main {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  height: 100%;
+  position: relative;
+  flex-wrap: nowrap;
+}
+.container .main .open {
+  height: 94vh;
+  margin-right: 20px;
+}
+.container .main .open .icon {
+  margin: 7px 12px;
+}
+.container .main .open .icon span {
+  cursor: pointer;
+  font-size: 25px;
+}
+.container .main .close {
+  position: absolute;
+  top: 0;
+}
+.container .main .close .icon {
+  margin: 7px 12px;
+}
+.container .main .close .icon span {
+  cursor: pointer;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 500px) {
+  .open {
+    display: none;
+  }
+  .close {
+    display: none;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .container .main .open {
+    height: 94vh;
+    width: 28%;
+    margin-right: 10px;
+  }
+  .container .main .open .icon {
+    margin: 7px 12px;
+  }
+  .container .main .open .icon span {
+    cursor: pointer;
+    font-size: 25px;
+  }
+  .container .main .close {
+    position: absolute;
+    top: 0;
+  }
+  .container .main .close .icon {
+    margin: 7px 12px;
+  }
+  .container .main .close .icon span {
+    cursor: pointer;
+    font-size: 25px;
+  }
+}/*# sourceMappingURL=basicStyles.module.css.map */

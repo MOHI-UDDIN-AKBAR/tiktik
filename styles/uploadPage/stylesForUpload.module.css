@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+.uploadPage {
+  width: 80%;
+  margin-left: 70px;
+  height: 80vh;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 50px auto;
+  margin-top: 60px;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1) inset;
+  border-radius: 10px;
+  padding: 2rem;
+  overflow-y: auto;
+  margin-right: 20px;
+}
+.uploadPage::-webkit-scrollbar {
+  width: 0px; /* width of the entire scrollbar */
+}
+.uploadPage .heading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.uploadPage .heading h1 {
+  font-size: 25px;
+  font-family: "PT Sans", sans-serif;
+}
+.uploadPage .heading span {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  color: rgb(133, 133, 133);
+}
+.uploadPage .uploadSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.uploadPage .uploadSection .videoFile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 4px dashed rgba(0, 0, 0, 0.28);
+  margin: 10px;
+  padding: 1rem 0;
+  border-radius: 20px;
+  width: 300px;
+  margin-right: 50px;
+}
+.uploadPage .uploadSection .videoFile:hover {
+  border: 4px dashed rgb(126, 126, 210);
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.uploadPage .uploadSection .videoFile label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.uploadPage .uploadSection .videoFile label .cloudIcon {
+  margin: 0 auto;
+  font-size: 70px;
+  color: rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
+}
+.uploadPage .uploadSection .videoFile label h2 {
+  font-size: 23px;
+  font-family: "PT Sans", sans-serif;
+  color: rgb(97, 97, 213);
+  font-weight: bold;
+}
+.uploadPage .uploadSection .videoFile label .requireInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.uploadPage .uploadSection .videoFile label .requireInfo span {
+  margin: 10px 0;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 15px;
+}
+.uploadPage .uploadSection .videoFile label p {
+  height: 45px;
+  width: 75%;
+  font-size: 20px;
+  margin: 20px auto;
+  margin-top: 40px;
+  background-color: rgb(97, 97, 213);
+  color: white;
+  text-align: center;
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+}
+.uploadPage .uploadSection .videoFile label input {
+  width: 0;
+  height: 0;
+}
+.uploadPage .uploadSection .videoFile .videoAsset {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+.uploadPage .uploadSection .videoFile .videoAsset video {
+  width: 100%;
+  height: 450px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.uploadPage .uploadSection .additionalInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-grow: 2;
+  padding: 1rem;
+}
+.uploadPage .uploadSection .additionalInfo .caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.uploadPage .uploadSection .additionalInfo .caption label {
+  font-size: 20px;
+  padding: 0.4rem 0;
+  font-weight: bold;
+  font-family: "PT Serif", serif;
+}
+.uploadPage .uploadSection .additionalInfo .caption input {
+  margin-top: 7px;
+  width: 100%;
+  font-size: 20px;
+  padding: 0.6rem 0.8rem;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.uploadPage .uploadSection .additionalInfo .caption input:focus {
+  outline: none;
+  border: 2px solid #1f2633;
+}
+.uploadPage .uploadSection .additionalInfo .topics {
+  margin: 1rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.uploadPage .uploadSection .additionalInfo .topics span {
+  font-size: 20px;
+  padding: 0.4rem 0;
+  font-weight: bold;
+  font-family: "PT Serif", serif;
+}
+.uploadPage .uploadSection .additionalInfo .topics select, .uploadPage .uploadSection .additionalInfo .topics select option {
+  margin-top: 7px;
+  width: 100%;
+  font-size: 18px;
+  padding: 0.6rem 0.8rem;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.uploadPage .uploadSection .additionalInfo .topics select:focus, .uploadPage .uploadSection .additionalInfo .topics select option:focus {
+  outline: none;
+  border: 2px solid #1f2633;
+}
+.uploadPage .uploadSection .additionalInfo .decision {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  margin-top: 50px;
+}
+.uploadPage .uploadSection .additionalInfo .decision button {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0.4rem 1.2rem;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+  margin-right: 80px;
+  width: 180px;
+  background-color: white;
+  font-weight: bold;
+}
+.uploadPage .uploadSection .additionalInfo .decision button:last-child {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  color: white;
+  background-color: rgb(97, 97, 213);
+}
+
+@media screen and (max-width: 800px) {
+  .uploadPage {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 5px;
+  }
+  .uploadPage .uploadSection .videoFile {
+    margin-right: 0px;
+  }
+  .uploadPage .uploadSection .additionalInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .uploadPage .uploadSection .additionalInfo .decision {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    margin-top: 50px;
+  }
+  .uploadPage .uploadSection .additionalInfo .decision button {
+    border-radius: 7px;
+    margin-right: 0px;
+    width: 120px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .uploadPage {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 10px;
+  }
+  .uploadPage .uploadSection .videoFile {
+    margin-right: 0px;
+  }
+  .uploadPage .uploadSection .additionalInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .uploadPage .uploadSection .additionalInfo .decision {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    margin-top: 50px;
+  }
+  .uploadPage .uploadSection .additionalInfo .decision button {
+    border-radius: 7px;
+    margin-right: 0px;
+    width: 120px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .uploadPage {
+    width: 90%;
+    margin-left: 70px;
+    height: 80vh;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px auto;
+    margin-top: 0px;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1) inset;
+    border-radius: 10px;
+    padding: 2rem;
+    overflow-y: auto;
+    margin: 70px auto;
+  }
+  .uploadPage::-webkit-scrollbar {
+    width: 0px; /* width of the entire scrollbar */
+  }
+}
+.wrongFile {
+  color: rgb(211, 21, 21);
+}/*# sourceMappingURL=stylesForUpload.module.css.map */
