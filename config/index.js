@@ -1,4 +1,5 @@
-const dev = process.env.NODE_ENV !== "production";
-export const server = dev
-  ? "http://localhost:3000/"
-  : "http://watch-by-arafat-gp.netlify.app";
+// const dev = process.env.NODE_ENV !== "production";
+// export const server = dev
+//   ? "http://localhost:3000"
+//   : "http://watch-by-arafat-gp.netlify.app";
+const server = "https://watch-by-arafat-gp.netlify.app";
