@@ -46,7 +46,7 @@ const CommentSection = ({
     } else {
       setIsLength(false);
     }
-  }, [isLength]);
+  }, [isLength, allComments, processing]);
   return (
     <div className={styles.commentSection}>
       <div className={styles.comments}>
