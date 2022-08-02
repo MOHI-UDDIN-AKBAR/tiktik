@@ -5,18 +5,21 @@ import { client } from "../../utils/client";
 
 type Data = {
   name: string;
-  picture?: string;
-  sub?: string;
+  picture: string;
+  sub: string;
 };
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse
 ) {
   if (req.method == "GET") {
-    const query = allUsersQuery();
-    const data = await client.fetch(query);
+    const data = await client.fetch(allUsersQuery());
     // console.log(data);
-    res.status(200).json(data);
+    if (data.length > 0) {
+      res.status(200).json(data);
+    } else {
+      res.json([]);
+    }
   }
 }

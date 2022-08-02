@@ -1,0 +1,498 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
+.postDetails {
+  width: 100%;
+  height: 94vh;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.postDetails .videoSection {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  background-color: #9e8fb2;
+  background-image: linear-gradient(315deg, #9e8fb2 0%, #a7acd9 74%);
+}
+.postDetails .videoSection .cancelButton {
+  position: absolute;
+  background-color: #a7acd9;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  border: none;
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+.postDetails .videoSection .video {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  position: relative;
+}
+.postDetails .videoSection .video video {
+  width: 100%;
+}
+.postDetails .videoSection .video .playButton {
+  position: absolute;
+  display: none;
+}
+.postDetails .videoSection .video .playButton button {
+  cursor: pointer;
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: inherit;
+  color: whitesmoke;
+  border: none;
+}
+.postDetails .videoSection .video .volumeButton {
+  position: absolute;
+  right: 80px;
+  top: 270px;
+  display: none;
+}
+.postDetails .videoSection .video .volumeButton button {
+  cursor: pointer;
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: inherit;
+  color: whitesmoke;
+  border: none;
+}
+.postDetails .videoSection .video:hover {
+  cursor: pointer;
+}
+.postDetails .videoSection .video:hover .playButton {
+  display: flex;
+}
+.postDetails .videoSection .video:hover .volumeButton {
+  display: flex;
+}
+.postDetails .videoInfo {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 0.4rem;
+  padding-left: 3rem;
+  width: 50%;
+}
+.postDetails .videoInfo .userInfo {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.postDetails .videoInfo .userInfo .img {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.postDetails .videoInfo .userInfo .name {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  padding: 0.3rem;
+}
+.postDetails .videoInfo .userInfo .name .nameWithIcon {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.postDetails .videoInfo .userInfo .name .nameWithIcon span:first-child {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-right: 12px;
+}
+.postDetails .videoInfo .userInfo .name .nameWithIcon span:last-child {
+  color: rgb(65, 65, 210);
+}
+.postDetails .videoInfo .userInfo .name small {
+  padding: 0.4rem;
+  text-transform: lowercase;
+  transform: translateX(-35px);
+}
+.postDetails .videoInfo .caption {
+  margin: 15px 0;
+}
+.postDetails .videoInfo .caption span {
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 1000px) {
+  .postDetails {
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .postDetails .videoSection {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .postDetails .videoSection .video {
+    width: 100%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 0.5rem;
+  }
+  .postDetails .videoSection .video video {
+    width: 100%;
+    max-height: 90%;
+  }
+  .postDetails .videoInfo {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .postDetails .videoInfo .userInfo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .postDetails .videoInfo .userInfo .img {
+    border-radius: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .postDetails .videoInfo .userInfo .name {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    padding: 0.3rem;
+  }
+  .postDetails .videoInfo .userInfo .name .nameWithIcon {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .postDetails .videoInfo .userInfo .name .nameWithIcon span:first-child {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 12px;
+  }
+  .postDetails .videoInfo .userInfo .name .nameWithIcon span:last-child {
+    color: rgb(65, 65, 210);
+  }
+  .postDetails .videoInfo .userInfo .name small {
+    padding: 0.4rem;
+    text-transform: lowercase;
+    transform: translateX(-35px);
+  }
+  .postDetails .videoInfo .caption {
+    margin: 15px 0;
+  }
+  .postDetails .videoInfo .caption span {
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+.likeSection {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0.3rem 0;
+  margin-bottom: 10px;
+}
+.likeSection .icon .notLiked, .likeSection .icon .liked {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+  font-size: 22px;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+.likeSection .icon .liked {
+  color: rgb(253, 4, 162);
+}
+.likeSection span {
+  margin: 7px 0;
+  font-weight: bold;
+  font-family: "Merriweather", serif;
+}
+
+.noResults {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 0.5rem;
+}
+.noResults span {
+  font-size: 90px;
+}
+.noResults p {
+  font-size: 25px;
+  color: rgb(146, 146, 146);
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .noResults {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .noResults span {
+    font-size: 70px;
+  }
+  .noResults p {
+    font-size: 20px;
+  }
+}
+.commentSection {
+  width: 100%;
+}
+.commentSection .comments {
+  height: 400px;
+  overflow-y: auto;
+  margin: 30px 10px;
+}
+.commentSection .comments::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+.commentSection .comments .allComments {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  width: 100%;
+}
+.commentSection .comments .allComments .comment {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.commentSection .comments .allComments .comment .userComment {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.commentSection .comments .allComments .comment .userComment img {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.commentSection .comments .allComments .comment .userComment .commentInfo {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: 10px;
+}
+.commentSection .comments .allComments .comment .userComment .commentInfo .userInfo {
+  border: none;
+  margin: 0;
+}
+.commentSection .comments .allComments .comment .userComment .commentInfo .userInfo span:first-child {
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-right: 12px;
+}
+.commentSection .comments .allComments .comment .userComment .commentInfo .userInfo span:last-child {
+  color: rgb(65, 65, 210);
+}
+.commentSection .comments .allComments .comment .userComment .commentInfo p {
+  margin-top: 8px;
+}
+.commentSection .form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.commentSection .form form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.commentSection .form form label {
+  width: 65%;
+}
+.commentSection .form form label input {
+  width: 100%;
+  font-size: 18px;
+  padding: 0.9rem;
+  border: 2px solid grey;
+  border-radius: 8px;
+}
+.commentSection .form form label input:focus {
+  outline: none;
+  border: 2px solid rgb(64, 64, 179);
+}
+.commentSection .form form button {
+  cursor: pointer;
+  font-size: 18px;
+  background-color: white;
+  padding: 0.9rem;
+  border-radius: 8px;
+  margin-left: 20px;
+  border: none;
+}
+.commentSection .form form button:hover {
+  border: 2px solid rgb(64, 64, 179);
+}
+
+@media screen and (max-width: 800px) {
+  .commentSection {
+    width: 100%;
+  }
+  .commentSection .comments {
+    height: 400px;
+    overflow-y: auto;
+    margin: 20px 0px;
+  }
+  .commentSection .comments::-webkit-scrollbar {
+    width: 12px; /* width of the entire scrollbar */
+  }
+  .commentSection .comments .allComments {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    width: 100%;
+  }
+  .commentSection .comments .allComments .comment {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .commentSection .comments .allComments .comment .userComment {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .commentSection .comments .allComments .comment .userComment img {
+    border-radius: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .commentSection .comments .allComments .comment .userComment .commentInfo {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: 10px;
+  }
+  .commentSection .comments .allComments .comment .userComment .commentInfo .userInfo {
+    border: none;
+    margin: 0;
+  }
+  .commentSection .comments .allComments .comment .userComment .commentInfo .userInfo span:first-child {
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-right: 12px;
+  }
+  .commentSection .comments .allComments .comment .userComment .commentInfo .userInfo span:last-child {
+    color: rgb(65, 65, 210);
+  }
+  .commentSection .comments .allComments .comment .userComment .commentInfo p {
+    margin-top: 8px;
+  }
+  .commentSection .form form label input {
+    font-size: 16px;
+    padding: 0.7rem;
+  }
+  .commentSection .form form button {
+    font-size: 16px;
+    padding: 0.7rem;
+  }
+}/*# sourceMappingURL=styles.module.css.map */

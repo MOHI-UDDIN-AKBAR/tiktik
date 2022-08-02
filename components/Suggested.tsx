@@ -12,33 +12,42 @@ interface IProps {
     _rev: string;
     _type: string;
     _updatedAt: string;
-  }[];
+  };
+  allUser: IProps["user"][];
+  fetchAllUsers: () => void;
 }
 const Suggested: React.FC = () => {
-  const { allUser }: { allUser: IProps["user"] } = useAuthStore();
+  const {
+    allUser,
+    fetchAllUsers,
+  }: { allUser: IProps["user"][]; fetchAllUsers: IProps["fetchAllUsers"] } =
+    useAuthStore();
+
   useEffect(() => {
-    console.log(allUser);
-  }, [allUser]);
+    fetchAllUsers();
+  }, [fetchAllUsers]);
+
+  // if (!allUser) return null;
   return (
     <div className={styles.suggestedUsers}>
       <h3>Suggested accounts</h3>
-      {allUser?.map((user, i) => {
+      {allUser?.slice(0, 6).map((user: IProps["user"]) => {
         const { userName, image, _id } = user;
         return (
-          <div key={i} className={styles.user}>
+          <div key={_id} className={styles.user}>
             <div className={styles.image}>
               <Image
                 src={image}
                 alt={userName}
-                width={40}
-                height={40}
+                width={30}
+                height={30}
                 loading="lazy"
                 className={styles.img}
               />
             </div>
             <div className={styles.info}>
               <div className={styles.userName}>
-                <span>{userName}</span>
+                <span>{userName.toLowerCase().replace(" ", "")}</span>
                 <span className={styles.icon}>
                   <GoVerified />
                 </span>

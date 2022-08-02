@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
+
+@mixin flexCenter($justify, $direction, $align) {
+  display: flex;
+  align-items: $align;
+  flex-direction: $direction;
+  justify-content: $justify;
+  flex-wrap: wrap;
+}
+
+.postDetails {
+  // border: 1px solid green;
+  width: 100%;
+  height: 94vh;
+  padding: 0 1rem;
+  @include flexCenter(flex-start, row, center);
+  .videoSection {
+    // border: 2px solid red;
+    width: 50%;
+    height: 100%;
+    // background-color: black;
+    @include flexCenter(center, column, center);
+    position: relative;
+    background-color: #9e8fb2;
+    background-image: linear-gradient(315deg, #9e8fb2 0%, #a7acd9 74%);
+
+    .cancelButton {
+      position: absolute;
+      background-color: #a7acd9;
+      top: 20px;
+      left: 20px;
+      font-size: 30px;
+      border: none;
+      padding: 0.6rem;
+      @include flexCenter(center, row, center);
+      color: white;
+
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1;
+    }
+    .video {
+      width: 100%;
+      @include flexCenter(center, row, center);
+      padding: 0 1rem;
+      position: relative;
+      video {
+        width: 100%;
+        // height: 300px;
+      }
+      .playButton {
+        position: absolute;
+        display: none;
+        button {
+          cursor: pointer;
+          font-size: 35px;
+          @include flexCenter(center, row, center);
+          background-color: inherit;
+          color: whitesmoke;
+          border: none;
+        }
+      }
+      .volumeButton {
+        position: absolute;
+        right: 80px;
+        top: 270px;
+        // border: 3px solid red;
+        display: none;
+        button {
+          cursor: pointer;
+          font-size: 35px;
+          @include flexCenter(center, row, center);
+          background-color: inherit;
+          color: whitesmoke;
+          border: none;
+        }
+      }
+      &:hover {
+        .playButton {
+          display: flex;
+        }
+        .volumeButton {
+          display: flex;
+        }
+        cursor: pointer;
+      }
+    }
+  }
+  .videoInfo {
+    // border: 2px solid red;
+    @include flexCenter(center, column, flex-start);
+    padding: 0 0.4rem;
+    padding-left: 3rem;
+    width: 50%;
+    .userInfo {
+      // border: 2px solid green;
+      @include flexCenter(flex-start, row, center);
+      .img {
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .name {
+        @include flexCenter(center, column, center);
+        margin-left: 20px;
+        padding: 0.3rem;
+        .nameWithIcon {
+          @include flexCenter(center, row, center);
+          span {
+            &:first-child {
+              font-size: 18px;
+              text-transform: uppercase;
+              font-weight: bold;
+              margin-right: 12px;
+            }
+            &:last-child {
+              color: rgb(65, 65, 210);
+            }
+          }
+        }
+        small {
+          padding: 0.4rem;
+          // color: rgb(141, 141, 141);
+          text-transform: lowercase;
+          transform: translateX(-35px);
+        }
+      }
+    }
+    .caption {
+      margin: 15px 0;
+      span {
+        text-transform: capitalize;
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .postDetails {
+    // border: 1px solid green;
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+    @include flexCenter(flex-start, column, center);
+    .videoSection {
+      // border: 2px solid red;
+      width: 100%;
+      height: 50vh;
+      // background-color: black;
+      @include flexCenter(center, column, center);
+      // position: relative;
+      .video {
+        width: 100%;
+        height: 95%;
+        @include flexCenter(center, column, center);
+        padding: 0 0.5rem;
+        // position: relative;
+        video {
+          width: 100%;
+          max-height: 90%;
+        }
+        // .playButton {
+        //   position: absolute;
+        //   button {
+        //     cursor: pointer;
+        //     font-size: 35px;
+        //     @include flexCenter(center, row, center);
+        //     background-color: inherit;
+        //     color: whitesmoke;
+        //     border: none;
+        //   }
+        // }
+        // .volumeButton {
+        //   position: absolute;
+        //   right: 80px;
+        //   top: 370px;
+        //   // border: 3px solid red;
+        //   button {
+        //     cursor: pointer;
+        //     font-size: 35px;
+        //     @include flexCenter(center, row, center);
+        //     background-color: inherit;
+        //     color: whitesmoke;
+        //     border: none;
+        //   }
+        // }
+      }
+    }
+    .videoInfo {
+      // border: 2px solid red;
+      @include flexCenter(center, column, flex-start);
+      padding: 0.5rem;
+      width: 100%;
+      margin-top: 20px;
+      .userInfo {
+        // border: 2px solid green;
+        @include flexCenter(flex-start, row, center);
+        .img {
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        .name {
+          @include flexCenter(center, column, center);
+          margin-left: 20px;
+          padding: 0.3rem;
+          .nameWithIcon {
+            @include flexCenter(center, row, center);
+            span {
+              &:first-child {
+                font-size: 18px;
+                text-transform: uppercase;
+                font-weight: bold;
+                margin-right: 12px;
+              }
+              &:last-child {
+                color: rgb(65, 65, 210);
+              }
+            }
+          }
+          small {
+            padding: 0.4rem;
+            // color: rgb(141, 141, 141);
+            text-transform: lowercase;
+            transform: translateX(-35px);
+          }
+        }
+      }
+      .caption {
+        margin: 15px 0;
+        span {
+          text-transform: capitalize;
+          color: rgba(0, 0, 0, 0.6);
+        }
+      }
+    }
+  }
+}
+
+.likeSection {
+  // border: 2px solid green;
+  @include flexCenter(center, column, center);
+  padding: 0.3rem 0;
+  margin-bottom: 10px;
+  .icon {
+    // border: 1px solid red;
+    .notLiked {
+      @include flexCenter(center, row, center);
+      cursor: pointer;
+      font-size: 22px;
+      // border: 1px solid green;
+      border: none;
+      padding: 0.6rem;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.06);
+      // color: grey;
+    }
+    .liked {
+      @extend .notLiked;
+      color: rgb(253, 4, 162);
+    }
+  }
+  span {
+    margin: 7px 0;
+    font-weight: bold;
+    font-family: "Merriweather", serif;
+  }
+}
+
+.noResults {
+  width: 100%;
+  // border: 1px solid red;
+  @include flexCenter(center, column, center);
+  padding: 0 0.5rem;
+  span {
+    font-size: 90px;
+    // color: rgba(0, 0, 0, 07);
+  }
+  p {
+    font-size: 25px;
+    color: rgb(146, 146, 146);
+    text-align: center;
+  }
+}
+@media screen and(max-width:800px) {
+  .noResults {
+    @include flexCenter(center, column, center);
+    span {
+      font-size: 70px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+}
+
+.commentSection {
+  // border: 2px solid green;
+  width: 100%;
+  .comments {
+    // border: 2px solid blue;
+    height: 400px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 12px; /* width of the entire scrollbar */
+    }
+    margin: 30px 10px;
+    .allComments {
+      @include flexCenter(flex-start, column, flex-start);
+      padding: 1rem 0;
+      width: 100%;
+      .comment {
+        // border: 1px solid red;
+        width: 100%;
+        @include flexCenter(flex-start, column, flex-start);
+        margin-bottom: 20px;
+        .userComment {
+          @include flexCenter(flex-start, row, flex-start);
+          img {
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          .commentInfo {
+            @include flexCenter(flex-start, column, flex-start);
+            margin-left: 10px;
+            .userInfo {
+              border: none;
+              // border: 2px solid green;
+              margin: 0;
+              span {
+                &:first-child {
+                  font-size: 18px;
+                  text-transform: capitalize;
+                  font-weight: bold;
+                  margin-right: 12px;
+                }
+                &:last-child {
+                  color: rgb(65, 65, 210);
+                }
+              }
+            }
+            p {
+              margin-top: 8px;
+              // border: 1px solid green;
+            }
+          }
+        }
+      }
+    }
+  }
+  .form {
+    width: 100%;
+    @include flexCenter(center, row, center);
+    form {
+      width: 100%;
+      @include flexCenter(center, row, center);
+      label {
+        width: 65%;
+        input {
+          width: 100%;
+          font-size: 18px;
+          padding: 0.9rem;
+          &:focus {
+            outline: none;
+            border: 2px solid rgb(64, 64, 179);
+          }
+          border: 2px solid grey;
+          border-radius: 8px;
+        }
+      }
+      button {
+        cursor: pointer;
+        font-size: 18px;
+        background-color: white;
+        padding: 0.9rem;
+        border-radius: 8px;
+        margin-left: 20px;
+        border: none;
+        &:hover {
+          border: 2px solid rgb(64, 64, 179);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .commentSection {
+    // border: 2px solid green;
+    width: 100%;
+    .comments {
+      // border: 2px solid blue;
+      height: 400px;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        width: 12px; /* width of the entire scrollbar */
+      }
+      margin: 20px 0px;
+      .allComments {
+        @include flexCenter(flex-start, column, flex-start);
+        padding: 1rem 0;
+        width: 100%;
+        .comment {
+          // border: 1px solid red;
+          width: 100%;
+          @include flexCenter(flex-start, column, flex-start);
+          margin-bottom: 20px;
+          .userComment {
+            @include flexCenter(flex-start, row, flex-start);
+            img {
+              border-radius: 50%;
+              object-fit: cover;
+            }
+            .commentInfo {
+              @include flexCenter(flex-start, column, flex-start);
+              margin-left: 10px;
+              .userInfo {
+                border: none;
+                // border: 2px solid green;
+                margin: 0;
+                span {
+                  &:first-child {
+                    font-size: 18px;
+                    text-transform: capitalize;
+                    font-weight: bold;
+                    margin-right: 12px;
+                  }
+                  &:last-child {
+                    color: rgb(65, 65, 210);
+                  }
+                }
+              }
+              p {
+                margin-top: 8px;
+                // border: 1px solid green;
+              }
+            }
+          }
+        }
+      }
+    }
+    .form {
+      form {
+        label {
+          input {
+            font-size: 16px;
+            padding: 0.7rem;
+          }
+        }
+        button {
+          font-size: 16px;
+          padding: 0.7rem;
+        }
+      }
+    }
+  }
+}

@@ -242,11 +242,11 @@
 .footer {
   @include flexCenter(flex-start, column, center);
   border-top: 2px solid rgba(0, 0, 0, 0.3);
-  margin-top: 10px;
+  margin-top: 8px;
   .section {
     // border: 2px solid green;
     @include flexCenter(flex-start, row, center);
-    margin: 10px 10px;
+    margin: 8px 10px;
     .each {
       color: rgb(142, 142, 142);
       margin: 5px;
@@ -459,7 +459,7 @@
   @include flexCenter(center, column, flex-start);
   // border: 1px solid green;
   width: 100%;
-  margin: 20px auto;
+  margin: 11px auto;
 
   h3 {
     color: rgb(100, 99, 99);
@@ -471,8 +471,9 @@
   .user {
     @include flexCenter(flex-start, row, center);
     width: 100%;
-    margin-bottom: 20px;
-    padding: 0.5rem;
+    margin-bottom: 10px;
+    // padding: 0 0.7rem;
+    padding-left: 0.7rem;
     .image {
       // border: 1px solid green;
       @include flexCenter(center, row, center);
@@ -487,11 +488,12 @@
     }
     .info {
       @include flexCenter(flex-start, column, center);
+      transform: translateY(5px);
       .userName {
         // border: 1px solid green;
         @include flexCenter(flex-start, row, center);
-        margin-left: 10px;
-        text-transform: uppercase;
+        margin-left: 13px;
+        // text-transform: uppercase;
         .icon {
           color: rgb(42, 42, 204);
           margin-left: 5px;

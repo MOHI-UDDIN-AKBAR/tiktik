@@ -70,8 +70,8 @@ const Upload: NextPage = () => {
     }
   };
   useEffect(() => {
-    console.log(topic);
-    console.log(userProfile);
+    // console.log(topic);
+    // console.log(userProfile);
   }, [topic]);
 
   return (
