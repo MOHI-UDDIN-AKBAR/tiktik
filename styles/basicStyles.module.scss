@@ -8,6 +8,8 @@
 .container {
   @include flexCenter(center, column, flex-start);
   // border: 1px solid green;
+  max-width: 1250px;
+  margin: 0 auto;
   .main {
     // border: 3px solid red;
     width: 100%;
@@ -17,9 +19,10 @@
     flex-wrap: nowrap;
     .open {
       // border: 3px solid red;
-
-      height: 94vh;
+      // width: 55%;
+      // height: 94vh;
       // width: 28%;
+      // width: 100px;
       margin-right: 20px;
       .icon {
         margin: 7px 12px;
@@ -51,34 +54,44 @@
     display: none;
   }
 }
-@media screen and (min-width: 1300px) {
+// @media screen and (min-width: 1300px) {
+//   .container {
+//     .main {
+//       .open {
+//         // border: 3px solid red;
+
+//         height: 94vh;
+//         width: 28%;
+//         margin-right: 10px;
+//         .icon {
+//           margin: 7px 12px;
+//           span {
+//             cursor: pointer;
+//             font-size: 25px;
+//           }
+//         }
+//       }
+//       .close {
+//         position: absolute;
+//         top: 0;
+//         // margin: 10px;
+//         .icon {
+//           margin: 7px 12px;
+//           span {
+//             cursor: pointer;
+//             font-size: 25px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+@media screen and (min-width: 1301px) {
   .container {
     .main {
       .open {
-        // border: 3px solid red;
-
-        height: 94vh;
-        width: 28%;
-        margin-right: 10px;
-        .icon {
-          margin: 7px 12px;
-          span {
-            cursor: pointer;
-            font-size: 25px;
-          }
-        }
-      }
-      .close {
-        position: absolute;
-        top: 0;
-        // margin: 10px;
-        .icon {
-          margin: 7px 12px;
-          span {
-            cursor: pointer;
-            font-size: 25px;
-          }
-        }
+        width: 55%;
       }
     }
   }

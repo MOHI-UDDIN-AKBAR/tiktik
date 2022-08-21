@@ -4,6 +4,8 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
+  max-width: 1250px;
+  margin: 0 auto;
 }
 .container .main {
   width: 100%;
@@ -17,7 +19,6 @@
   flex-wrap: nowrap;
 }
 .container .main .open {
-  height: 94vh;
   margin-right: 20px;
 }
 .container .main .open .icon {
@@ -47,28 +48,8 @@
     display: none;
   }
 }
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1301px) {
   .container .main .open {
-    height: 94vh;
-    width: 28%;
-    margin-right: 10px;
-  }
-  .container .main .open .icon {
-    margin: 7px 12px;
-  }
-  .container .main .open .icon span {
-    cursor: pointer;
-    font-size: 25px;
-  }
-  .container .main .close {
-    position: absolute;
-    top: 0;
-  }
-  .container .main .close .icon {
-    margin: 7px 12px;
-  }
-  .container .main .close .icon span {
-    cursor: pointer;
-    font-size: 25px;
+    width: 55%;
   }
 }/*# sourceMappingURL=basicStyles.module.css.map */

@@ -1,0 +1,130 @@
+.userAccount {
+  width: 100%;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0.4rem 0rem;
+  margin-top: 20px;
+}
+.userAccount .userImageWithName {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.userAccount .userImageWithName .img {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.userAccount .userImageWithName .name {
+  margin-left: 27px;
+  transform: translateY(-3px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.userAccount .userImageWithName .name .nameWithIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  transform: translateY(-3px);
+}
+.userAccount .userImageWithName .name .nameWithIcon span {
+  font-size: 18px;
+  text-transform: lowercase;
+  font-weight: bold;
+}
+.userAccount .userImageWithName .name .nameWithIcon span:last-child {
+  color: rgb(154, 154, 242);
+  margin: 0 10px;
+}
+.userAccount .userImageWithName .name small {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.userAccount .userVideosAndLikedVideos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 60px;
+}
+.userAccount .userVideosAndLikedVideos .options {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding-bottom: 5px;
+}
+.userAccount .userVideosAndLikedVideos .options span {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 50px;
+  color: #90a4ae;
+  cursor: pointer;
+}
+.userAccount .userVideosAndLikedVideos .options .active {
+  color: black;
+  border-bottom: 2px solid black;
+}
+.userAccount .userVideosAndLikedVideos .Videos {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.userAccount .userVideosAndLikedVideos .Videos .post {
+  cursor: pointer;
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.userAccount .userVideosAndLikedVideos .Videos .post .video {
+  width: 70%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+}
+.userAccount .userVideosAndLikedVideos .Videos .post .userFriendly {
+  position: absolute;
+  bottom: 30px;
+  left: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.userAccount .userVideosAndLikedVideos .Videos .post .userFriendly span {
+  color: white;
+  font-size: 20px;
+}
+.userAccount .userVideosAndLikedVideos .Videos .post .userFriendly span:first-child {
+  cursor: pointer;
+}
+.userAccount .userVideosAndLikedVideos .Videos .post .userFriendly span:last-child {
+  font-size: 18px;
+  transform: translateY(-3px);
+  margin-left: 6px;
+}
+.userAccount .userVideosAndLikedVideos .Videos .post .caption {
+  margin-top: 10px;
+  color: rgb(13, 13, 13);
+  text-transform: capitalize;
+}/*# sourceMappingURL=styles.module.css.map */

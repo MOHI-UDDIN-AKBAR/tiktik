@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useAuthStore } from "../store";
+import Link from "next/link";
 import styles from "../styles/indexPage/index.module.css";
 import { GoVerified } from "react-icons/go";
 import Image from "next/image";
@@ -22,7 +23,10 @@ const Suggested: React.FC = () => {
     fetchAllUsers,
   }: { allUser: IProps["user"][]; fetchAllUsers: IProps["fetchAllUsers"] } =
     useAuthStore();
-
+  // const [users, setUsers] = useState(allUser);
+  const users = allUser
+    .sort(() => 0.5 - Math.random())
+    .slice(0, allUser.length);
   useEffect(() => {
     fetchAllUsers();
   }, [fetchAllUsers]);
@@ -31,20 +35,24 @@ const Suggested: React.FC = () => {
   return (
     <div className={styles.suggestedUsers}>
       <h3>Suggested accounts</h3>
-      {allUser?.slice(0, 6).map((user: IProps["user"]) => {
+      {users?.slice(0, 5).map((user: IProps["user"]) => {
         const { userName, image, _id } = user;
         return (
           <div key={_id} className={styles.user}>
-            <div className={styles.image}>
-              <Image
-                src={image}
-                alt={userName}
-                width={30}
-                height={30}
-                loading="lazy"
-                className={styles.img}
-              />
-            </div>
+            <Link href={`/userAccountDetails/${_id}`}>
+              <div className={styles.image}>
+                {/* <a> */}
+                <Image
+                  src={image}
+                  alt={userName}
+                  width={30}
+                  height={30}
+                  loading="lazy"
+                  className={styles.img}
+                />
+                {/* </a> */}
+              </div>
+            </Link>
             <div className={styles.info}>
               <div className={styles.userName}>
                 <span>{userName.toLowerCase().replace(" ", "")}</span>

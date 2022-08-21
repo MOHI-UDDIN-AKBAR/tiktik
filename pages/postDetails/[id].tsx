@@ -4,6 +4,7 @@ import LikeSection from "../../components/LikeSection";
 import CommentSection from "../../components/CommentSection";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { GoVerified } from "react-icons/go";
 
 import { MdOutlineCancel } from "react-icons/md";
@@ -30,7 +31,7 @@ const Index = ({ postDetails }: Details) => {
   const { userProfile }: any = useAuthStore();
   const [comment, setComment] = useState("");
   const [processing, setProcessing] = useState(false);
-
+  const router = useRouter();
   const playVideo = () => {
     console.log(videoRef?.current);
     if (isPlaying) {
@@ -108,11 +109,15 @@ const Index = ({ postDetails }: Details) => {
     <>
       <div className={styles.postDetails}>
         <div className={styles.videoSection}>
-          <Link href={"/"}>
-            <button type="button" className={styles.cancelButton}>
-              {<MdOutlineCancel />}
-            </button>
-          </Link>
+          {/* <Link href={`/`}> */}
+          <button
+            type="button"
+            className={styles.cancelButton}
+            onClick={() => router.back()}
+          >
+            {<MdOutlineCancel />}
+          </button>
+          {/* </Link> */}
           <div className={styles.video}>
             <video
               onClick={playVideo}

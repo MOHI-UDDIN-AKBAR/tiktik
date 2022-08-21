@@ -11,6 +11,7 @@ import {
   BsFillVolumeMuteFill,
 } from "react-icons/bs";
 import { BiPause } from "react-icons/bi";
+
 import { IProps } from "../types";
 interface videoPost {
   post: IProps["post"];
@@ -45,81 +46,99 @@ const VideoCard: React.FC<videoPost> = ({ post }) => {
       onClick={(e) => console.log(post)}
     >
       <div className={styles.userInfo}>
-        <Image
-          src={post.postedBy.image}
-          alt={post.postedBy.userName}
-          loading="lazy"
-          width={60}
-          height={60}
-          className={styles.profilePicture}
-        />
+        <Link href={`/userAccountDetails/${post?.postedBy?._id}`}>
+          <a>
+            <Image
+              src={post?.postedBy?.image}
+              alt={post?.postedBy?.userName}
+              loading="lazy"
+              width={60}
+              height={60}
+              className={styles.profilePicture}
+            />
+          </a>
+        </Link>
         <div className={styles.info}>
-          <span className={styles.userName}>{post.postedBy.userName}</span>
+          <Link href={`/userAccountDetails/${post?.postedBy?._id}`}>
+            {/* <a> */}
+            <span className={styles.userName}>{post?.postedBy?.userName}</span>
+            {/* </a> */}
+          </Link>
           <span>
-            {post.caption.length > 20
-              ? post.caption.substring(0, 20)
+            {post?.caption.length > 20
+              ? post?.caption.substring(0, 20)
               : post.caption}
-            {post.caption.length > 20 && "..."}
+            {post?.caption.length > 20 && "..."}
           </span>
         </div>
-        <span className={styles.verified}>
-          <GoVerified />
-        </span>
-        <small>{post.postedBy.userName}</small>
+
+        <Link href={`/userAccountDetails/${post?.postedBy?._id}`}>
+          {/* <a> */}
+          <span className={styles.verified}>
+            <GoVerified />
+          </span>
+          {/* </a> */}
+        </Link>
+        <Link href={`/userAccountDetails/${post?.postedBy?._id}`}>
+          <a>
+            <small>{post?.postedBy?.userName}</small>
+          </a>
+        </Link>
       </div>
-      <Link href={`/postDetails/${post._id}`}>
-        <div
-          className={styles.videoInfo}
-          onMouseEnter={() => setIsHover(true)}
-          onMouseLeave={() => setIsHover(false)}
-        >
+      <div
+        className={styles.videoInfo}
+        onMouseEnter={() => setIsHover(true)}
+        onMouseLeave={() => setIsHover(false)}
+      >
+        <Link href={`/postDetails/${post._id}`}>
           <video
             loop
             ref={videoRef}
-            src={post.video.asset.url}
+            src={post?.video?.asset?.url}
             className={styles.video}
             onClick={(e) => {
               console.log(videoRef.current);
             }}
             //   controls
           />
-          {isHover && (
-            <div className={styles.functions}>
-              <span>
-                {isPlaying ? (
-                  <span
-                    onClick={(e) => {
-                      playVideo();
-                    }}
-                  >
-                    <BiPause />
-                  </span>
-                ) : (
-                  <span
-                    onClick={(e) => {
-                      playVideo();
-                    }}
-                  >
-                    <BsFillPlayFill />
-                  </span>
-                )}
-              </span>
-              <span>{` `}</span>
+        </Link>
 
-              {isVolume ? (
-                <span onClick={(e) => setIsVolume(false)}>
-                  {" "}
-                  <BsFillVolumeMuteFill />
+        {isHover && (
+          <div className={styles.functions}>
+            <span>
+              {isPlaying ? (
+                <span
+                  onClick={(e) => {
+                    playVideo();
+                  }}
+                >
+                  <BiPause />
                 </span>
               ) : (
-                <span onClick={(e) => setIsVolume(true)}>
-                  <BsFillVolumeDownFill />
+                <span
+                  onClick={(e) => {
+                    playVideo();
+                  }}
+                >
+                  <BsFillPlayFill />
                 </span>
               )}
-            </div>
-          )}
-        </div>
-      </Link>
+            </span>
+            <span>{` `}</span>
+
+            {isVolume ? (
+              <span onClick={(e) => setIsVolume(false)}>
+                {" "}
+                <BsFillVolumeMuteFill />
+              </span>
+            ) : (
+              <span onClick={(e) => setIsVolume(true)}>
+                <BsFillVolumeDownFill />
+              </span>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

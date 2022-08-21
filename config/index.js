@@ -3,3 +3,4 @@
 //   ? "http://localhost:3000"
 //   : "http://watch-by-arafat-gp.netlify.app";
 export const server = "https://watch-by-arafat-gp.netlify.app";
+// export const server = "http://localhost:3000";

@@ -7,12 +7,12 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Suggested from "./Suggested";
 
-const Sidebar = () => {
+const Sidebar = ({ isSidebarOpen }: { isSidebarOpen: boolean }) => {
   const router = useRouter();
   const { topic } = router.query;
   console.log(topic);
   return (
-    <div className={styles.sidebar}>
+    <div className={isSidebarOpen ? styles.sidebar : styles.sidebarOff}>
       <div className={styles.home}>
         <span className={styles.icon}>
           <AiFillHome />
