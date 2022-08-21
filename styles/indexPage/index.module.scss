@@ -11,8 +11,11 @@
 .navbar {
   width: 100%;
   @include flexCenter(space-between, row, center);
-  // border: 2px solid purple;
+
   flex-wrap: nowrap;
+  padding: 0.5rem 0;
+
+  border-bottom: 2px solid #dde7eb;
   h3 {
     // font-family: "Roboto Mono", monospace;
     font-family: "Yeseva One", cursive;
@@ -26,6 +29,7 @@
     color: rgb(97, 97, 213);
   }
   .loginSection {
+    // border: 1px solid red;
     @include flexCenter(flex-end, row, center);
     // border: 1px solid red;
     margin-right: 20px;
@@ -35,8 +39,8 @@
       .uploadButton {
         margin-right: 10px;
         cursor: pointer;
-        border: 2px solid black;
-        padding: 0.5rem;
+        border: 2px solid #90a4ae;
+        padding: 0.35rem 0.4rem;
         span {
           // border: 2px solid black;
           padding: 0.6rem 0;
@@ -90,7 +94,6 @@
       @include flexCenter(flex-end, row, center);
       // border: 1px solid red;
       margin-right: 30px;
-      margin-top: 20px;
       .userInfo {
         @include flexCenter(flex-end, row, center);
         // border: 1px solid green;
@@ -98,8 +101,8 @@
         .uploadButton {
           margin-right: 20px;
           cursor: pointer;
-          padding: 0.6rem;
-          border: 2px solid black;
+          padding: 0.6rem 0.4rem;
+          border: 2px solid #90a4ae;
           span {
             padding: 1rem 0.6rem;
             font-size: 20px;
@@ -114,7 +117,7 @@
         }
         .logout {
           transform: translateY(2px);
-          font-size: 30px;
+          font-size: 25px;
           margin-left: 30px;
           cursor: pointer;
           font-weight: bold;
@@ -200,10 +203,11 @@
 
 @media screen and (max-width: 1300px) {
   .sidebar {
-    width: 20vw;
+    // width: 20vw;
     padding: 0.3rem;
     border-right: 2px solid rgba(0, 0, 0, 0.1);
     @include flexCenter(center, column, center);
+    // border: 2px solid red;
     .home {
       @include flexCenter(center, row, center);
       padding: 0.5rem;
@@ -243,6 +247,7 @@
   @include flexCenter(flex-start, column, center);
   border-top: 2px solid rgba(0, 0, 0, 0.3);
   margin-top: 8px;
+  padding-top: 0.5rem;
   .section {
     // border: 2px solid green;
     @include flexCenter(flex-start, row, center);
@@ -272,10 +277,12 @@
   height: 94vh;
   // border: 2px solid red;
   margin-left: 50px;
+  // margin-left: 20px;
   overflow: auto;
   &::-webkit-scrollbar {
     width: 0px;
   }
+  // @include flexCenter(center, column, center);
   .posts {
     @include flexCenter(flex-start, column, flex-start);
     // margin-left: 5px;
@@ -293,21 +300,27 @@
       .userInfo {
         @include flexCenter(flex-start, row, center);
         margin: 5px;
-
-        .profilePicture {
-          border-radius: 50%;
+        a {
+          .profilePicture {
+            border-radius: 50%;
+            cursor: pointer;
+          }
         }
         .info {
           margin-left: 15px;
 
           @include flexCenter(flex-start, column, center);
+          // a {
           .userName {
+            // border: 2px solid red;
             text-transform: uppercase;
+            font-weight: 500;
             font-size: 16px;
             transform: translateY(12px);
-            font-weight: 500;
             margin-bottom: 10px;
+            cursor: pointer;
           }
+          // }
           span {
             &:last-child {
               text-transform: capitalize;
@@ -319,34 +332,43 @@
             }
           }
         }
+        // a {
         .verified {
           color: rgb(48, 48, 224);
           margin: 0 10px;
           transform: translateY(-10px);
+          cursor: pointer;
         }
+        // }
+        // a {
         small {
           transform: translateY(-14px);
           color: rgb(119, 117, 117);
           text-transform: lowercase;
           display: none;
+          cursor: pointer;
         }
+        // }
       }
       .videoInfo {
         height: 500px;
-        width: 290px;
+        width: 250px;
         margin-bottom: 40px;
-        cursor: pointer;
-        background-color: rgba(0, 0, 0, 0.1);
+
+        // background-color: rgba(0, 0, 0, 0.1);
+        background-color: #eceff1;
         border-radius: 20px;
         position: relative;
         .video {
+          // border: 3px solid red;
+          cursor: pointer;
           height: 500px;
           width: 100%;
         }
         .functions {
           // border: 1px solid green;
           position: absolute;
-          bottom: 50px;
+          bottom: 60px;
           // width: 100px;
           width: 100%;
           @include flexCenter(center, row, center);
@@ -434,14 +456,20 @@
           }
         }
         .videoInfo {
-          height: 600px;
-          width: 700px;
+          height: 500px;
+          // width: 700px;
+          width: 600px;
+          margin-left: 70px;
           cursor: pointer;
           @include flexCenter(center, row, center);
-          background-color: rgba(0, 0, 0, 0.1);
+          // background-color: rgba(0, 0, 0, 0.1);
+          background-color: #eceff1;
           .video {
             // padding: 1rem;
             width: 100%;
+          }
+          .functions {
+            bottom: 30px;
           }
         }
       }
@@ -482,6 +510,7 @@
       outline: 1px solid rgb(81, 81, 214);
       border-radius: 50%;
       .img {
+        cursor: pointer;
         border-radius: 50%;
         object-fit: cover;
       }
@@ -520,7 +549,7 @@
     .user {
       @include flexCenter(center, row, center);
 
-      margin-bottom: 10px;
+      margin-bottom: 20px;
 
       .image {
         @include flexCenter(center, row, center);
@@ -541,5 +570,50 @@
 @media screen and (max-width: 1300px) {
   .sidebar {
     width: 100px;
+  }
+}
+
+.searchSection {
+  label {
+    // background-color: #e3f2fd;
+    background-color: #eceff1;
+    width: 320px;
+    @include flexCenter(space-between, row, center);
+    padding: 0.3rem;
+    border-radius: 30px;
+    overflow: hidden;
+
+    input {
+      background-color: #eceff1;
+      width: 82%;
+      font-size: 16px;
+      color: #1f2633;
+      padding: 0.2rem 0.5rem;
+      border: none;
+      border-right: 2px solid rgb(145, 145, 145);
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: rgb(153, 153, 153);
+      }
+    }
+
+    span {
+      color: grey;
+      font-size: 20px;
+      transform: translate(-10px, 2.5px);
+      padding: 0.5rem;
+      cursor: pointer;
+    }
+    &:focus-within {
+      border: 2px solid #b0bec5;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .searchSection {
+    display: none;
   }
 }

@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 )}
               </div>
 
-              {isSidebarOpen && <Sidebar />}
+              {isSidebarOpen && <Sidebar isSidebarOpen={isSidebarOpen} />}
             </div>
           )}
           <Component {...pageProps} />

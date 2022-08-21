@@ -1,5 +1,6 @@
 export interface IProps {
   post: {
+    topic: string;
     caption: string;
     video: {
       asset: {

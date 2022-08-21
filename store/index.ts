@@ -4,6 +4,7 @@ import { server } from "../config/index";
 const authStore = (set: any) => ({
   userProfile: null,
   allUser: [],
+  text: "",
   addUser: (user: any) => set({ userProfile: user }),
   removeUser: () => set({ userProfile: null }),
   fetchAllUsers: async () => {
@@ -12,6 +13,7 @@ const authStore = (set: any) => ({
     // console.log(data);
     set({ allUser: data });
   },
+  setText: (text: string) => set({ text: text }),
 });
 
 export const useAuthStore = create(
